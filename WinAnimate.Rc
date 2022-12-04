@@ -1,0 +1,16 @@
+#include "Resource.h" //includes all necessary resource definitions
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+#define	IDS_MYBITMAP	   	102	
+#define	IDS_BMPREGION       103 
+
+
+// Icons ------------------------------------------------------------------------------------------
+ICON_APP_32     ICON DISCARDABLE "..\Icons\OA32.ico"
+
+// Bitmaps ----------------------------------------------------------------------------------------
+IDS_MYBITMAP	BITMAP "DDRAWa.bmp"
+
+// Gifs -------------------------------------------------------------------------------------------
+IDS_BMPREGION   RCDATA  DISCARDABLE "ddrawa.rgn"

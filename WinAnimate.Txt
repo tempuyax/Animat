@@ -1,0 +1,58 @@
+    @invoke DrawTextEx, hDC, pCaptionText, -1, addr [ecx].ElasticSkin.TitleRect, \
+                        DT_CENTER or DT_VCENTER or DT_SINGLELINE or DT_END_ELLIPSIS, NULL
+    invoke SetTextColor, hDC, dPrvColor
+    invoke SetBkMode, hDC, dPrvBkMode
+
+
+
+    addr [ecx].ElasticSkin.TitleRect
+
+    dDataBuff:dword
+    mov pDataBuffer2dX, $New(DataBuffer2d, Init, esi, DATAPOINTS, sizeof(real4))
+	m2m real4 ptr [eax], dDataBuff
+
+
+	VirtualMethod     EnableActions,      dword            ;TRUE/FALSE
+    OCall esi.EnableActions, FALSE
+
+;WindowProcedure Proc Private Uses Ebx Edi Esi hWnd:HWND, uMsg:ULONG, wParam:WPARAM, lParam:LPARAM
+;	Local ps:PAINTSTRUCT, rcRgn:RECT, wmId:DWord, wmEvent:DWord
+;	.If uMsg == WM_CREATE
+;		Ret
+;	.ElseIf uMsg == WM_COMMAND
+;       Ret
+;	.ElseIf uMsg == WM_LBUTTONDOWN
+;       Ret
+;	.ElseIf uMsg == WM_RBUTTONDOWN
+;		Ret
+;	.ElseIf uMsg == WM_PAINT
+;		Ret
+;	.ElseIf uMsg == WM_KEYDOWN
+;		Ret
+;	.ElseIf uMsg == WM_TIMER
+;		Ret
+;	.ElseIf uMsg == WM_DESTROY
+;		Ret
+;	.EndIf
+;	invoke DefWindowProc, hWnd, uMsg, wParam, lParam
+;	Ret
+;WindowProcedure EndP
+
+
+RT_ACCELERATOR	Accelerator table
+RT_ANICURSOR	Animated cursor
+RT_ANIICON		Animated icon
+RT_BITMAP		Bitmap resource
+RT_CURSOR		Hardware-dependent cursor resource
+RT_DIALOG		Dialog box
+RT_FONT			Font resource
+RT_FONTDIR		Font directory resource
+RT_GROUP_CURSOR	Hardware-independent cursor resource
+RT_GROUP_ICON	Hardware-independent icon resource
+RT_ICON			Hardware-dependent icon resource
+RT_MENU			Menu resource
+RT_MESSAGETABLE	Message-table entry
+RT_RCDATA		Application-defined resource (raw data)
+RT_STRING		String-table entry
+RT_VERSION		Version resource
+ 
